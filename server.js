@@ -12,8 +12,6 @@ app.use(express.json());
 
 mongoose.connect("mongodb://localhost/workoutTracker", {
     useNewUrlParser: true,
-    useFindAndModify: false,
-    useCreateIndex: true,
     useFindAndModify: false
 });
 

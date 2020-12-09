@@ -10,7 +10,7 @@ app.use(logger("dev"));
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
-mongoose.connect("mongodb://localhost/workoutTracker", {
+mongoose.connect(process.env.MONGDB_URI || "mongodb://localhost/workoutTracker", {
     useNewUrlParser: true,
     useFindAndModify: false
 });
